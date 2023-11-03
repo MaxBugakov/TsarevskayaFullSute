@@ -1,0 +1,55 @@
+{% extends 'main/layout.html' %}
+
+
+{% block style %}
+<!-- Мои стили. -->
+<link rel="stylesheet" href="/static/main/about-page/style.css">
+<!-- Адаптив -->
+<link rel="stylesheet" href="/static/main/about-page/adapt.css">
+{% endblock %}
+
+
+{% block content %}
+    <div class="space"></div>
+     <!-- Обертка для идея, миссия -->
+     <div class="info-main-wrapper">
+        <div class="info-wrapper">
+             <!-- Идея -->
+             <div class="info__mission element-animation">
+                <div class="info__mission__title"><h2>Идея</h2></div>
+                <div class="info__mission__text">
+                    <p>
+                        TSAREVSKAYA - нетривиальный премиум бренд одежды из Москвы. Создатель бренда
+                         - Мария Царевская, дизайнер одежды, посвятившая все свое время с 16 лет поиску новых текстур,
+                         форм и принтов в мужском гардеробе, которые не будут противоречить образу жизни и взглядам всех
+                         тех, кто разделяет ценности бренда. К этим ценностям можно отнести свободу, реализацию,
+                         открытость новому, красоту, легкость и постоянное развитие.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Миссия -->
+            <div class="info__mission element-animation">
+                <div class="info__mission__title"><h2>Миссия</h2></div>
+                <div class="info__mission__text">
+                    <p>
+                        <span>Ни одна ситуация не должна менять ваше самоощущение.</span>
+                        Для соответствия этой цели предназначена наша одежда, в ней вы сможете ощущать
+                        себя уверенно, несмотря на то, где вы оказались и что вокруг происходит. Наша одежда
+                        универсальная, но нетривиальная, комфортная и сексуальная.
+                        Мы разработали специальную вышивку с QR кодом, которая позволит упростить процесс
+                         шоппинга и стилизации для тех, кто ценит свое время. Мы восхищаемся трудолюбивостью
+                          нашего общества и хотим дать возможность нашим клиентам выглядеть всегда хорошо, не отвлекая их от дел.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+    <!-- Main -->
+    <script type="text/javascript" src="/static/main/about-page/main.js"></script>
+{% endblock %}
+

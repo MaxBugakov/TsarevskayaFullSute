@@ -1,0 +1,8 @@
+@media screen and (max-width: 500px) {
+    .send-message-wrapper {
+        padding: 0 10px;
+    }
+    .pre-button-wrapper a {
+        font-size: 15px;
+    }
+}

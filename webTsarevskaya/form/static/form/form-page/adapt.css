@@ -1,0 +1,21 @@
+@media screen and (max-width: 500px) {
+    .form {
+        padding: 0 10px;
+    }
+    .form div {
+        margin: 20px 20px;
+    }
+    .send-message__title h4 {
+        font-size: 25px;
+        margin: 20px 0;
+    }
+    .send-message__text p {
+        font-size: 18px;
+    }
+    .space {
+        height: 150px;
+    }
+    .footer {
+        margin-top: 200px;
+    }
+}

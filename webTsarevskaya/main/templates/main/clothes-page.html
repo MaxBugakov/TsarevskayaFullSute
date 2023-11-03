@@ -1,0 +1,47 @@
+{% extends 'main/layout.html' %}
+
+
+{% block style %}
+<!-- Слайдер. -->
+<link rel="stylesheet" type="text/css" href="/static/main/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="/static/main/slick/slick-theme.css">
+<!-- Мои стили. -->
+<link rel="stylesheet" href="/static/main/clothes-page/style.css">
+<!-- Адаптив. -->
+<link rel="stylesheet" href="/static/main/clothes-page/adapt.css">
+{% endblock %}
+
+
+{% block content %}
+    <div class="space"></div>
+
+    <div class="clo1-title"><h2>Футболка</h2></div>
+    <div class="slider single-item">
+        <div><div class="slider__img1 slider-sizee"></div></div>
+        <div><div class="slider__img2 slider-sizee"></div></div>
+        <div><div class="slider__img3 slider-sizee"></div></div>
+    </div>
+
+    <!-- Кнопка предзаказа -->
+    <div class="pre-button-wrapper"><a href="{% url 'form' %}">Оформить предзаказ</a></div>
+
+    <div class="clo2-title"><h2>Брюки</h2></div>
+    <div class="slider single-item">
+        <div><div class="slider__img11 slider-sizee"></div></div>
+        <div><div class="slider__img22 slider-sizee"></div></div>
+        <div><div class="slider__img33 slider-sizee"></div></div>
+        <div><div class="slider__img44 slider-sizee"></div></div>
+    </div>
+
+     <!-- Кнопка предзаказа -->
+     <div class="pre-button-wrapper"><a href="{% url 'form' %}">Оформить предзаказ</a></div>
+{% endblock %}
+
+
+{% block js %}
+    <!-- Slick slider -->
+    <script src="/static/main/slick/slick.min.js"></script>
+    <!-- Main -->
+    <script type="text/javascript" src="/static/main/clothes-page/main.js"></script>
+{% endblock %}
+

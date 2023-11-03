@@ -1,0 +1,63 @@
+{% extends 'main/layout.html' %}
+
+
+{% block style %}
+<!-- Мои стили. -->
+<link rel="stylesheet" href="/static/form/form-page/style.css">
+<!-- Адаптив -->
+<link rel="stylesheet" href="/static/form/form-page/adapt.css">
+{% endblock %}
+
+
+{% block content %}
+    <div class="space"></div>
+    <div class="form-title"><p>Мы еще работаем над этим разделом. Оставьте свои данные и мы вас оповестим, когда произойдут изменения</p></div>
+    <div class="form">
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                <label for="surname-input">Фамилия</label>
+                {{ form.surname }}
+            </div>
+            <div>
+                <label for="name-input">Имя</label>
+                {{ form.name }}
+            </div>
+            <div>
+                <label for="patronymic-input">Отчество</label>
+                {{ form.patronymic }}
+            </div>
+            <div>
+                <label for="email-input">Почта</label>
+                 {{ form.email }}
+            </div>
+            <div>
+                <label for="height-input">Рост, см</label>
+                {{ form.height }}
+            </div>
+            <div>
+                <label for="weight-input">Вес, кг</label>
+                {{ form.weight }}
+            </div>
+            <div>
+                <label for="clothes-size-select">Размер одежды</label>
+                 {{ form.clothes_size }}
+            </div>
+            <div>
+                <label for="foot-size-input">Размер ноги, ru</label>
+                {{ form.foot_size }}
+            </div>
+            <div>
+                <input id="send-button" type="submit" value="Отправить">
+            </div>
+
+        </form>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+    <!-- Main -->
+    <script type="text/javascript" src="/static/form/form-page/main.js"></script>
+{% endblock %}
+

@@ -1,0 +1,52 @@
+{% extends 'main/layout.html' %}
+
+
+{% block style %}
+<!-- Слайдер. -->
+<link rel="stylesheet" type="text/css" href="/static/main/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="/static/main/slick/slick-theme.css">
+<!-- Мои стили. -->
+<link rel="stylesheet" href="/static/main/main-page/style.css">
+<!-- Адаптив -->
+<link rel="stylesheet" href="/static/main/main-page/adapt.css">
+{% endblock %}
+
+
+{% block content %}
+    <!-- Первая фотка -->
+    <div class="img1"></div>
+
+    <!-- Прокручивающийся текст -->
+    <div class='marquee-text'>nothing personal, only clothes.</div>
+
+    <div class="second-menu element-animation">
+        <a href="{% url 'clothes' %}"><span>брюки/шорты</span></a>
+        <a href="{% url 'clothes' %}"><span>футболки</span></a>
+        <a href="{% url 'form' %}"><span>рубашки</span></a>
+        <a href="{% url 'form' %}"><span>нижнее белье</span></a>
+        <a href="{% url 'form' %}"><span>верхняя одежда</span></a>
+        <a href="{% url 'form' %}"><span>аксессуары</span></a>
+        <a href="{% url 'form' %}"><span>campaign</span></a>
+        <a href="{% url 'clothes' %}"><span>capsule</span></a>
+    </div>
+
+    <div class="slider single-item">
+        <div><div class="slider__img1 slider-sizee"></div></div>
+        <div><div class="slider__img2 slider-sizee"></div></div>
+        <div><div class="slider__img3 slider-sizee"></div></div>
+        <div><div class="slider__img4 slider-sizee"></div></div>
+        <div><div class="slider__img5 slider-sizee"></div></div>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+    <!-- Slick slider -->
+    <script src="/static/main/slick/slick.min.js"></script>
+    <!-- Бегающий текст. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.5.0/jquery.marquee.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Main -->
+    <script type="text/javascript" src="/static/main/main-page/main.js"></script>
+{% endblock %}
+

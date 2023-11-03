@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+
+
+{% block style %}
+<!-- Мои стили. -->
+<link rel="stylesheet" href="/static/form/afterform-page/style.css">
+<!-- Адаптив -->
+<link rel="stylesheet" href="/static/form/afterform-page/adapt.css">
+{% endblock %}
+
+
+{% block content %}
+    <div class="space"></div>
+    <div class="send-message-wrapper">
+        <div class="send-message">
+            <div class="send-message__title"><h4>Форма отправлена</h4></div>
+            <div class="pre-button-wrapper"><a href="{% url 'main' %}">Перейти на главную страницу</a></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+    <!-- Main -->
+    <script type="text/javascript" src="/static/form/afterform-page/main.js"></script>
+{% endblock %}
+

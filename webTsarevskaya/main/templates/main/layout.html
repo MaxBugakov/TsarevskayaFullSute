@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tsarevskaya</title>
+<!-- Шрифты. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Сброс стилей. -->
+<link rel="stylesheet" href="/static/main/general/reset.css">
+<!-- Общие стили. -->
+<link rel="stylesheet" type="text/css" href="/static/main/general/style.css">
+<link rel="stylesheet" type="text/css" href="/static/main/general/adapt.css">
+<!--  Частные стили.  -->
+{% block style %}{% endblock %}
+<!-- Корректное отображение на разных устройствах. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+</head>
+<body>
+    <div class="test-wrapper"></div>
+    <!-- Обёртка меню. -->
+    <div class="nav-wrapper">
+        <div class="nav">
+            <!-- Полоска меню. -->
+            <div class="nav1">
+                <!-- Кнопка меню. -->
+                <div class="nav__menu-button" id="menu"><div><span>Menu</span></div></div>
+                <!-- Логотип -->
+                <a href="{% url 'main' %}" class="nav1__logo-ref" >
+                    <div class="nav1__logo"></div>
+                    <div class="nav1__dot"></div>
+                </a>
+                <!-- Кнопка корзина -->
+                <a href="{% url 'form' %}" id="shopping-bag"><div class="nav1__shopping-bag"></div></a>
+            </div>
+            <!-- Выпадающая менюшка. -->
+            <div class="nav__drop-menu" id="drop-menu">
+                <!-- <div class="drop-menu__list">
+                    <a href="../clothes-page/index.html"><span>Capsule</span></a>
+                    <a href="../clothes-page/index.html"><span>Одежда</span></a>
+                    <a href=""><span>Аксессуары</span></a>
+                    <a href="../clothes-page/index.html"><span>New</span></a>
+                    <a href=""><span>Стилизация</span></a>
+                    <a href="../about-us-page/index.html"><span>О нас</span></a>
+                </div> -->
+                <div class="drop-menu-wrapper">
+                    <div class="drop-menu-first-wrapper">
+                        <div class="drop-menu-first">
+                            <div class="drop-menu-first__refs-wrapper">
+                                <div class="drop-menu-first__refs">
+                                    <a><span>Capsule</span></a>
+                                    <a href="{% url 'clothes' %}"><span>Одежда</span></a>
+                                    <a href="{% url 'form' %}"><span>Аксессуары</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="drop-menu-second-wrapper">
+                        <div class="drop-menu-second">
+                            <a href="{% url 'clothes' %}"><span>New</span></a>
+                            <a href="{% url 'form' %}"><span>Cтилизация</span></a>
+                            <a href="{% url 'about' %}"><span>О нас</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Частный контент.  -->
+    {% block content %}{% endblock %}
+
+    <!-- Подвал. -->
+    <div class="footer">
+        <a href="{% url 'main' %}" class="footer__logo"></a>
+        <div class="footer__refs">
+            <div><a href="{% url 'form' %}">Доставка</a></div>
+            <div><a href="{% url 'form' %}">Оплата</a></div>
+            <div><a href="{% url 'form' %}">Контакты</a></div>
+            <div><a href="{% url 'form' %}">Условия возврата</a></div>
+            <div><a href="{% url 'form' %}">История бренда</a></div>
+            <div><a href="{% url 'about' %}">О нас</a></div>
+            <div><a href="{% url 'form' %}">Оферта</a></div>
+            <div><a href="{% url 'form' %}">Пользовательское соглашение</a></div>
+        </div>
+        <div class="footer__ceo-name"><h2>ИП Царевская Мария Артемовна</h2></div>
+    </div>
+
+
+
+    <!-- JQuery. -->
+    <script src="/static/main/general/jquery-full/jquery-3.7.1-full.js"></script>
+    <!-- Общий js. -->
+    <script src="/static/main/general/main.js"></script>
+    <!-- Частный js. -->
+    {% block js %}{% endblock %}
+
+</body>
+</html>
+
+
+

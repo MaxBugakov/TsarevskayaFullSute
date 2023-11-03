@@ -1,0 +1,179 @@
+/* Первая картинка */
+.img1 {
+    width: 100%;
+    height: 900px;
+    background-image: url(../images/first-img-morror.JPG);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+
+/* Прокручивающийся текст */
+.marquee-text {
+    width: 100%;
+    height: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    letter-spacing: 10px;
+    font-weight: 600;
+    background-color: rgb(38, 52, 118);
+    overflow: hidden;
+    color: rgb(237, 237, 237);
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+
+/* Второе меню */
+.second-menu {
+    width: 100%;
+    height: 550px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    position: relative;
+    box-sizing: border-box;
+}
+.second-menu a {
+    text-decoration: none;
+    position: absolute;
+    border-radius: 30px;
+    border: 2px solid rgb(38, 52, 118);
+    overflow: hidden;
+    transition: 0.2s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: rgb(38, 52, 118);
+    padding: 15px;
+    box-sizing: border-box;
+}
+.second-menu a span {
+    position: relative;
+}
+.second-menu a span::before {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(38, 52, 118);
+    content: ' ';
+    position: absolute;
+    top: calc(50% + 1px);
+    transition: 0.2s;
+}
+.second-menu a:hover{
+    background-color: rgb(38, 52, 118);
+    color: rgb(237, 237, 237);
+}
+.second-menu a:hover span::before {
+    background-color: rgb(237, 237, 237);
+}
+
+.second-menu a:nth-child(1) {
+    top: 5%;
+    left: 10%;
+}
+.second-menu a:nth-child(1) span::before {
+    background: transparent;
+}
+.second-menu a:nth-child(2) {
+    top: 0;
+    right: 15%;
+}
+.second-menu a:nth-child(2) span::before {
+    background: transparent;
+}
+.second-menu a:nth-child(3) {
+    top: 30%;
+    left: 55%;
+}
+.second-menu a:nth-child(4) {
+    left: 20px;
+    top: 40%;
+}
+.second-menu a:nth-child(5) {
+    top: 65%;
+    left: 30%;
+}
+.second-menu a:nth-child(6) {
+    top: 55%;
+    right: 20px;
+}
+.second-menu a:nth-child(7) {
+    bottom: 0;
+    left: 5%;
+    font-weight: 700;
+    background: transparent;
+    color: rgb(38, 52, 118);
+    border: 0;
+}
+.second-menu a:nth-child(7):hover span::before {
+    background: rgb(38, 52, 118);
+}
+.second-menu a:nth-child(8) {
+    bottom: 0;
+    right: 10%;
+    font-weight: 700;
+    background: transparent;
+    color: rgb(38, 52, 118);
+    border: 0;
+}
+.second-menu a:nth-child(8) span::before {
+    background: transparent;
+}
+/* Анимация при скроле */
+.element-animation {
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+.element-animation.element-show {
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%);
+}
+
+
+
+
+
+/* Кастомизация слайдера */
+.slick-prev,
+.slick-next {
+    background-color: rgb(237, 237, 237);
+    width: 8%;
+}
+.slick-initialized .slick-slide {
+    display: flex;
+    justify-content: center;
+}
+.slider {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+/* Слайдер фото */
+.slider-sizee {
+    width: 90%;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.slider__img1 {
+    background-image: url(https://i.pinimg.com/564x/58/35/ae/5835ae86c6a8bef529d82335371fd449.jpg);
+}
+.slider__img2 {
+    background-image: url(../images/slider-img2.JPG);
+}
+.slider__img3 {
+    background-image: url(../images/slider-img3.JPG);
+}
+.slider__img4 {
+    background-image: url(../images/slider-img4.JPG);
+}
+.slider__img5 {
+    background-image: url(../images/slider-img5.JPG);
+}
